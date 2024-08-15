@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Upcoming Events</h1>
+    </header>
+    <main>
+        <section id="events">
+            <!-- Event listings will be dynamically loaded here -->
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Event Name</h1>
+    </header>
+    <main>
+        <section id="event-details">
+            <!-- Detailed event info, including description, pricing, and booking form -->
+            <div id="event-description">
+                <p>Description of the event...</p>
+            </div>
+            <div id="event-pricing">
+                <p>Ticket Prices...</p>
+            </div>
+            <div id="booking-form">
+                <form>
+                    <!-- Form fields for booking -->
+                    <input type="number" id="quantity" name="quantity" placeholder="Number of Tickets" required>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Booking Confirmation</h1>
+    </header>
+    <main>
+        <section id="confirmation-details">
+            <!-- Confirmation details will be shown here -->
+            <p>Your booking has been confirmed! Details are as follows:</p>
+            <p>Event: Event Name</p>
+            <p>Date: Event Date</p>
+            <p>Number of Tickets: 2</p>
+        </section>
+        <button onclick="window.print()">Print Confirmation</button>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
+<!-- Event Date Selection -->
+
+<input type="date" id="event-date" name="event-date">
+<!-- Example of Modal for Event Details -->
+
+<div id="eventModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Event Details...</p>
+    </div>
+</div>
+
+<script>
+// Modal script
+let modal = document.getElementById("eventModal");
+let span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
